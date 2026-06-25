@@ -5,7 +5,7 @@
  * custody on BNB Smart Chain). This package is a thin, typed client
  * over its public REST + WebSocket API.
  *
- *     import { Client } from "@ctg-exchange/sdk";
+ *     import { Client } from "@ctgexchange/sdk";
  *
  *     const client = new Client({ apiKey, apiSecret });
  *     const balances = await client.getBalances();

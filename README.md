@@ -7,7 +7,7 @@ over the public REST + WebSocket interface.
 ## Install
 
 ```sh
-npm install @ctg-exchange/sdk
+npm install @ctgexchange/sdk
 ```
 
 Requires Node.js 18+. Ships ESM and CommonJS builds with type
@@ -18,7 +18,7 @@ declarations.
 ### Public market data — no key needed
 
 ```ts
-import { Client } from "@ctg-exchange/sdk";
+import { Client } from "@ctgexchange/sdk";
 
 const client = new Client();
 
@@ -36,7 +36,7 @@ API keys are created in the CTG.EXCHANGE web app (Account → API keys). Read
 them from the environment — never hard-code them.
 
 ```ts
-import { Client } from "@ctg-exchange/sdk";
+import { Client } from "@ctgexchange/sdk";
 
 const client = new Client({
   apiKey: process.env.CTG_EXCHANGE_API_KEY,
@@ -59,7 +59,7 @@ console.log(order.id, order.status);
 ### WebSocket streams
 
 ```ts
-import { MarketDataStream } from "@ctg-exchange/sdk";
+import { MarketDataStream } from "@ctgexchange/sdk";
 
 const stream = new MarketDataStream({ channels: ["trades@CTGUSDT"] });
 for await (const msg of stream) {
@@ -72,7 +72,7 @@ in-band with a signed first frame. Subscribe to any of `orders`,
 `trades`, `balances`:
 
 ```ts
-import { UserStream } from "@ctg-exchange/sdk";
+import { UserStream } from "@ctgexchange/sdk";
 
 const stream = new UserStream({
   apiKey: process.env.CTG_EXCHANGE_API_KEY!,
