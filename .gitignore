@@ -1,0 +1,22 @@
+# Secrets — never commit. Credentials belong in the environment.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Build output
+dist/
+
+# Dependencies
+node_modules/
+
+# Tooling caches
+.vitest/
+*.tsbuildinfo
+
+# Editor / OS
+.claude/
+.idea/
+.vscode/
+.DS_Store
